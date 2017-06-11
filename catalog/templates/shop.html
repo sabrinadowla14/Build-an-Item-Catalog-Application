@@ -1,0 +1,85 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<!-- This will show the selected category of shop. -->
+	
+<div class = 'flash'>
+   {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+<div class="row split">
+		<div class="col-md-12"></div>
+	</div>
+	
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 padding-top">
+		
+			<a href="{{url_for('newWomenItem')}}">
+				<button class="btn btn-default" id="items">
+					<span class="shop" aria-hidden="true"></span>Add Item
+				</button>
+			</a
+			
+		
+		</div>
+		<div class="col-md-1"></div>
+		
+		
+	</div>
+	
+	
+	<div class = "shopItem">	
+	<table class="table">
+    <thead>
+	  <tr>
+
+        <th>Categories</th>
+        <th>{{shopName}} Items ({{womenItemsCount}} items)</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+	<tr>
+	<td>
+	
+	 
+	  {% for shop in shops %}
+	  <ul class="list-group">
+		<a href = "{{url_for('showShop', shop_id = shop.id)}}">
+			
+           <li class="list-group-item">{{shop.name}}</li>
+			
+		</a>
+		</ul>
+	  {% endfor %}
+	  
+	</td>
+	
+	<td>
+	<ul class="list-group">
+	 {% for item in items %}
+	  <a href="{{url_for('showItem', shop_id = item.shop.id ,item_id = item.id )}}">
+		<li class="list-group-item">{{item.name}}</li>
+	  </a>
+	  {% endfor %}
+	</ul>
+	</td>
+	
+	
+</tr>
+  </tbody>
+  </table>
+</div>
+
+  
+{% endblock %}

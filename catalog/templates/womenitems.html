@@ -1,0 +1,93 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	
+	<div class="row heading-creator">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{ shop.name }}
+			<figure class="creator">
+				<img src="{{ url_for('static', filename='user.gif') }}">
+				<figcaption>{{ creator.name }}</figcaption>
+			</figure>
+			</h1>
+
+		</div>
+	</div>
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			
+			
+			<a href="{{url_for('newWomenItem')}}">
+				<button class="btn btn-default" id="new-women-item">
+					<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Item
+				</button>
+			</a>
+			
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="row">
+	   <div class="col-md-1"></div>
+		<div class="col-md-10" data-toggle="modal" data-target="#myModal1">
+		<div class="women-item">
+			<h3 class="itemName">{{item.name}}</h3>
+			<div class="btn">Description of item</div>
+		</div>
+		</div>
+	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="myModalLabel">Item Description</h2>
+                </div>
+                <div class="modal-body">
+		             <div class="women-item">
+			            <h3 class="title">{{item.name}}</h3>
+			            <p>{{item.description}}</p>
+			            <p class="women-price">{{item.price}}</p>
+			            <p>{{item.color}}</p>
+			
+	                    {%if 'username' not in session %}
+	                    <p> If you want to edit or delete the item, Please login first! </p>
+	     
+	                   {% else %}
+	                   <a href="{{url_for('editWomenItem', shop_id = item.shop_id, item_id = item.id)}}">Edit</a> |
+			           <a href="{{url_for('deleteWomenItem', shop_id = item.shop_id, item_id = item.id)}}">Delete</a>
+			           {% endif %}
+			
+                
+			</div>
+			    </div>
+			<div class="modal-footer">
+                    <button type="button" class="imageBtn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+	
+    $('#myModal1').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+   })
+   
+    
+ </script>
+ 
+
+{% endblock %}

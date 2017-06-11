@@ -1,0 +1,199 @@
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	
+}
+
+body {
+    position: relative;
+    font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+    font-size: 14px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #030303;
+}
+a:hover,
+    a:focus {
+    padding: 10px 25px;
+    background: #f0f8ff;
+    text-decoration: none;
+    min-width: 48px;
+    min-height: 48px;
+}
+.container {
+    padding: 20px;
+}
+
+
+h1 {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	color: #51453B;
+	line-height: 60px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 24px;
+	color: #2f4f4f;
+	line-height: 29px;
+}
+
+h3 {
+	font-size: 18px;
+	color: #4A4A4A;
+	line-height: 24px;
+}
+ p {
+ 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ 	font-weight: 800;
+ }
+
+ strong {
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ }
+ 
+.padding-top {
+	padding-top: 30px;
+}
+.padding-bottom {
+	padding-bottom: 30px;
+}
+.margin-right {
+	margin-right: 30px;
+}
+.padding-none {
+	padding: 0;
+}
+
+.btn {
+	color: #f8f8ff;
+	background-color: #00688b;
+}
+.btn:hover {
+	border-color: #f0f8ff;
+}
+.btn.delete {
+	border-color: #00008b;
+	color: #8b0a50;
+}
+.btn.delete:hover {
+	border-color: #00008b;
+	color: #8b0a50;
+}
+.glyphicon {
+	margin-right: 10px;
+}
+.heading {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	
+}
+.heading p {
+	margin-bottom: 0;
+	line-height: 20px;
+	color: #191970;
+}
+.heading a {
+	margin-bottom: 0;
+	line-height: 20px;
+	font-size: 20px;
+	color: #191970;
+	font-weight: 600;
+}
+
+.split {
+	background-color: #8b7d6b;
+	height: 45px;
+}
+
+.banner.main {
+	height: 350px;
+	background: url("/static/shop.jpg");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.button {
+	color: #528b8b;
+}
+.banner.profile {
+	height: 250px;
+	background-color: #fff8dc;
+}
+.banner h1 {
+	margin: 25px 0;
+}
+.row .shop-list {
+ 	background-color: #cdb79e;
+ 	padding: 20px;	
+ }
+ .heading-creator {
+	margin: 25px 0; 
+}
+
+.row .women-item {
+	background: #cdc8b1;
+	padding: 20px;
+	margin: 20px;
+	margin-left: -20px;
+	color: #000000; 
+}
+.women-item-price {
+	font-weight: 600;
+	color: #000000;
+}
+.creator {
+	padding-right: 20px;
+	margin-top: -20px;
+	text-align: center;
+	float: right;
+}
+.creator img {
+	width: 150px;
+	border-radius: 100%;
+	border-color: #8b3e2f;
+}
+.creator figcaption {
+	font-size: 14px;
+	color: #0a0a0a;
+	font-weight: 400;
+	margin-top: -10px;
+}
+.flash {
+	background-color: #eed5b7;
+    width: 100%;
+	height: 55px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+	color: #030303;
+	padding-top: 5px;
+}
+
+.login_logout {
+	background: #3B5997;
+	border-color: #191970;
+}
+
+.loginGoogle {
+
+	background: #da4635;
+	border-color: #191970;
+}
+h3 .itemName {
+	font-size: 25px; 
+ }
