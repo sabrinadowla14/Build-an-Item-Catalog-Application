@@ -22,7 +22,7 @@ APPLICATION_NAME = "Shops for Women"
 
 
 # Connect to Database and create database session
-engine = create_engine('sqlite:///itemsdatabase.db')
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 Base.metadata.bind = engine
 
 # Create database session
