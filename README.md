@@ -3,7 +3,7 @@
 
 Developed an application that provides a list of items within a variety of categories (*Shops*) as
 well as provides a user registration and authentication system. Registered users will have the
-ability to post, edit and delete their own items. I have learned how to develop a RESTful web application
+ability to post, edit and delete their own items. I have developed a RESTful web application
 using the Python framework Flask along with implementing third-party OAuth authentication. 
 Also learned when to properly use the various HTTP methods available to me and how these methods relate 
 to CRUD (create, read, update and delete) operations.
