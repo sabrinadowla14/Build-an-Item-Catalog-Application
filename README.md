@@ -1,4 +1,5 @@
 ## Project: Build an Item Catalog Application 
+
 **Note**: Contents are taken from *websites*, *GitHub* and *Instructors Notes*.
 
 Developed an application that provides a list of items within a variety of categories (*Shops*) as
@@ -9,6 +10,7 @@ Also learned when to properly use the various HTTP methods available to me and h
 to CRUD (create, read, update and delete) operations.
 
 ## Required Libraries and dependencies
+
 A web framework Flask version - 0.9
 Python version - 2.7.13
 I have used SQLAlchemy - The Database Toolkit for Python
